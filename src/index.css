@@ -1475,33 +1475,17 @@ a {
    ========================================================================== */
 
 @media (max-width: 1024px) {
+    /* Grids em Tablets */
     .grid-3 {
         grid-template-columns: repeat(2, 1fr);
     }
-    .footer-top {
-        grid-template-columns: 2fr 1fr 1fr;
-        gap: 3rem;
-    }
-    .footer-links:last-child {
-        grid-column: span 3;
-        margin-top: 1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .grid-2, .grid-3 {
+    
+    .team-grid {
         grid-template-columns: 1fr;
+        gap: 2rem;
     }
     
-    .section-title {
-        font-size: 2rem;
-    }
-    
-    .section-padding {
-        padding: 5rem 0;
-    }
-    
-    /* Navbar Responsiva */
+    /* Navbar Responsiva - Colapsa em 1024px para evitar overlaps */
     .mobile-toggle {
         display: flex;
     }
@@ -1536,7 +1520,7 @@ a {
     }
     
     .btn-nav {
-        display: none; /* Oculta na navbar em telas pequenas */
+        display: none; /* Oculta na navbar em telas menores que laptop */
     }
     
     /* Hamburger Transform */
@@ -1550,9 +1534,32 @@ a {
         transform: translateY(-7px) rotate(-45deg);
     }
     
+    /* Footer em Tablets */
+    .footer-top {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+    .footer-links:last-child {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-padding {
+        padding: 5rem 0;
+    }
+    
     /* Hero */
     .hero-title {
-        font-size: 2.4rem;
+        font-size: 2.2rem;
     }
     .hero-subtitle {
         font-size: 1rem;
@@ -1561,12 +1568,16 @@ a {
         flex-direction: column;
         gap: 1rem;
     }
+    
+    /* Estatísticas da Hero empilham em celulares */
     .hero-stats {
+        grid-template-columns: 1fr;
         margin-top: 3rem;
-        gap: 1rem;
+        gap: 2rem;
+        text-align: center;
     }
     .stat-number {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
     }
     
     /* Sobre */
@@ -1574,16 +1585,16 @@ a {
         margin-top: 2rem;
     }
     .pillar-card {
-        padding: 1.75rem;
+        padding: 1.5rem;
     }
     
-    /* Equipe */
+    /* Equipe colapsa em coluna */
     .team-card {
         flex-direction: column;
     }
     .team-img-wrapper {
         width: 100%;
-        height: 250px;
+        height: 280px;
     }
     .team-info {
         width: 100%;
@@ -1598,13 +1609,10 @@ a {
         grid-template-columns: 1fr;
     }
     
-    /* Footer */
+    /* Footer colapsa em uma coluna */
     .footer-top {
         grid-template-columns: 1fr;
         gap: 2.5rem;
-    }
-    .footer-links:last-child {
-        grid-column: span 1;
     }
     .footer-bottom-container {
         flex-direction: column;
@@ -1615,6 +1623,6 @@ a {
     /* Modal */
     .modal-content {
         padding: 2.5rem 1.5rem;
-        width: 90%;
+        width: 92%;
     }
 }
