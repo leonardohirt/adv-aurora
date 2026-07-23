@@ -198,25 +198,7 @@ function App() {
                   className={`nav-link ${activeSection === 'equipe' ? 'active' : ''}`}
                   onClick={closeMenu}
                 >
-                  Corpo Jurídico
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#depoimentos"
-                  className={`nav-link ${activeSection === 'depoimentos' ? 'active' : ''}`}
-                  onClick={closeMenu}
-                >
-                  Reconhecimento
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#faq"
-                  className={`nav-link ${activeSection === 'faq' ? 'active' : ''}`}
-                  onClick={closeMenu}
-                >
-                  FAQ
+                  Equipe
                 </a>
               </li>
               <li>
