@@ -4,6 +4,7 @@ import partnerGabriel from './assets/partner_gabriel.jpg';
 import partnerHelena from './assets/partner_helena.jpg';
 import Hero3DCanvas from './components/Hero3DCanvas';
 import TiltCard from './components/TiltCard';
+import Logo from './components/Logo';
 
 function App() {
   // ==========================================================================
@@ -160,15 +161,7 @@ function App() {
       {/* Header / Navbar */}
       <header className={`navbar ${isScrolled ? 'scrolled' : ''}`} id="navbar">
         <div className="container navbar-container">
-          <a href="#inicio" className="logo" onClick={closeMenu}>
-            <div className="logo-icon-emblem">
-              <i className="fa-solid fa-scale-balanced"></i>
-            </div>
-            <div className="logo-text">
-              <span className="brand-name">AURORA</span>
-              <span className="brand-sub">ASSOCIADOS</span>
-            </div>
-          </a>
+          <Logo onClick={closeMenu} />
 
           <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`} id="nav-menu">
             <ul className="nav-list">
@@ -837,15 +830,7 @@ function App() {
       <footer className="footer">
         <div className="container footer-top-grid">
           <div>
-            <a href="#inicio" className="logo">
-              <div className="logo-icon-emblem">
-                <i className="fa-solid fa-scale-balanced"></i>
-              </div>
-              <div className="logo-text">
-                <span className="brand-name">AURORA</span>
-                <span className="brand-sub">ASSOCIADOS</span>
-              </div>
-            </a>
+            <Logo />
             <p className="footer-brand-desc">
               Compromisso inabalável com a ética, o rigor acadêmico e a defesa intransigente dos direitos de nossos clientes nos tribunais do país.
             </p>
