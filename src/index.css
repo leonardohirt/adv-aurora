@@ -1534,11 +1534,13 @@ a {
 
 @media (max-width: 768px) {
     .container {
-        padding: 0 1.35rem;
+        padding: 0 1.25rem;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .section-padding {
-        padding: 4.25rem 0;
+        padding: 4rem 0;
     }
 
     .grid-2, .grid-3 {
@@ -1547,52 +1549,126 @@ a {
     }
 
     .hero-section {
-        padding-top: 110px;
-        padding-bottom: 50px;
+        padding-top: 100px;
+        padding-bottom: 40px;
+        overflow: hidden;
+    }
+
+    .hero-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hero-badge-pill {
+        font-size: 0.65rem;
+        letter-spacing: 0.12em;
+        padding: 0.35rem 0.75rem;
+        margin-bottom: 1.25rem;
+        max-width: 100%;
+        white-space: normal;
+        word-break: break-word;
+        box-sizing: border-box;
     }
 
     .hero-title {
-        font-size: 2.15rem;
-        line-height: 1.18;
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 1.15rem;
+        word-break: break-word;
     }
 
     .hero-subtitle {
-        font-size: 0.98rem;
-        margin-bottom: 1.85rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1.75rem;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .hero-actions {
         flex-direction: column;
         width: 100%;
-        gap: 0.85rem;
+        max-width: 100%;
+        gap: 0.75rem;
+        margin-bottom: 2rem;
+        box-sizing: border-box;
     }
 
     .hero-actions .btn {
         width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 0.85rem 0.75rem;
+        font-size: 0.76rem;
+        letter-spacing: 0.08em;
+        white-space: normal;
+        text-align: center;
+        justify-content: center;
+        line-height: 1.3;
     }
 
     .hero-location-strip {
-        font-size: 0.78rem;
-        padding-top: 1.2rem;
+        font-size: 0.76rem;
+        line-height: 1.45;
+        padding-top: 1.15rem;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hero-location-strip span {
+        flex: 1;
+        word-break: break-word;
     }
 
     .hero-3d-wrapper {
-        height: 280px;
+        width: 100%;
+        max-width: 100%;
+        height: 260px;
+        box-sizing: border-box;
+    }
+
+    .hero-3d-frame {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hero-3d-caption {
+        left: 0.75rem;
+        right: 0.75rem;
+        bottom: 0.75rem;
+        font-size: 0.62rem;
+        letter-spacing: 0.1em;
+        gap: 0.35rem;
+        flex-wrap: wrap;
     }
 
     .section-title {
-        font-size: 1.9rem;
+        font-size: 1.85rem;
     }
 
     .editorial-quote-text {
-        font-size: 1.35rem;
+        font-size: 1.3rem;
     }
 
     .service-card-editorial,
     .pillar-item,
     .testimonial-card-editorial,
     .contact-form-card {
-        padding: 1.6rem 1.35rem;
+        padding: 1.5rem 1.25rem;
     }
 
     .form-grid.grid-2 {
@@ -1601,7 +1677,7 @@ a {
 
     .footer-top-grid {
         grid-template-columns: 1fr;
-        gap: 2.25rem;
+        gap: 2rem;
     }
 
     .footer-bottom-flex {
@@ -1611,32 +1687,41 @@ a {
     }
 
     .modal-card {
-        padding: 2.25rem 1.35rem;
+        padding: 2rem 1.25rem;
         max-width: 92%;
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        padding: 0 1.1rem;
+        padding: 0 1rem;
     }
 
     .hero-title {
-        font-size: 1.85rem;
+        font-size: 1.75rem;
+        line-height: 1.2;
     }
 
-    .hero-badge-pill {
-        font-size: 0.65rem;
-        padding: 0.35rem 0.75rem;
-        letter-spacing: 0.15em;
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .hero-actions .btn {
+        font-size: 0.72rem;
+        padding: 0.8rem 0.5rem;
+        letter-spacing: 0.06em;
     }
 
     .hero-3d-wrapper {
-        height: 240px;
+        height: 220px;
+    }
+
+    .hero-3d-caption span {
+        font-size: 0.58rem;
     }
 
     .section-title {
-        font-size: 1.65rem;
+        font-size: 1.6rem;
     }
 
     .brand-title {
