@@ -8,7 +8,7 @@ export default function TiltCard({ children, className = '', maxTilt = 8, scale 
   });
 
   const handleMouseMove = (e) => {
-    if (!cardRef.current) return;
+    if (!cardRef.current || window.innerWidth <= 768) return;
     const rect = cardRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;

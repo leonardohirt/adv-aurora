@@ -210,6 +210,15 @@ function App() {
                   Contato
                 </a>
               </li>
+              <li className="mobile-cta-item">
+                <a
+                  href="#contato"
+                  className="btn btn-gold btn-full"
+                  onClick={closeMenu}
+                >
+                  Agendar Consulta
+                </a>
+              </li>
             </ul>
           </nav>
 
